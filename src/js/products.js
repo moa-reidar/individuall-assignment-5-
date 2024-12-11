@@ -98,3 +98,23 @@ function sortProducts() {
 
     renderProducts(sortedProducts);
 }
+
+// Åpne modal med produktinformasjon
+function openModal(productId) {
+    const modal = document.getElementById('product-modal');
+    const product = products.find(p => p.id === productId);
+
+    document.getElementById('modal-title').textContent = product.name;
+    document.getElementById('modal-image').src = product.image;
+    document.getElementById('modal-image').alt = product.name;
+    document.getElementById('modal-description').textContent = product.description;
+    document.getElementById('modal-price').textContent = `Pris: ${product.price} NOK`;
+
+    modal.style.display = 'flex';
+}
+
+// Lukk modal
+function closeModal() {
+    const modal = document.getElementById('product-modal');
+    modal.style.display = 'none';
+}
