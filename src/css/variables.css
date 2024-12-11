@@ -11,6 +11,10 @@
 
 
     /* Typografi */
+    --font-family-regular:"Roboto-Regular";
+    --font-family-bold:"Roboto-Bold";
+    --font-family-new:"Oswald";
+
     --font-size-base: 16px;
     --font-size-large: 1.25rem;
     --font-size-small: 0.875rem;
