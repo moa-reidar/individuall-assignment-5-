@@ -61,3 +61,12 @@ function completeOrder(name, address, email) {
     window.location.href = './index.html'; 
 }
 
+// Initialiser bestillingssiden, viser handlekurven, legger til skjema-validering 
+function initOrderPage() {
+    renderCartItems(); 
+    orderForm.addEventListener('submit', validateForm); 
+}
+
+// Kjør initOrderPage når siden lastes
+document.addEventListener('DOMContentLoaded', initOrderPage);
+
