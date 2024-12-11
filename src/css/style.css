@@ -12,3 +12,79 @@
     font-family: "Oswald";
     src: url(../assets/fonts/Oswald-VariableFont_wght.ttf);
 }
+
+
+body {
+    min-height: 100vh;
+    font-family: var(--font-family-bold),Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--foreground-color);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color);
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    flex-grow: 1;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 300;
+    color: var(--color-primary);
+    letter-spacing: 0.1rem;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: var(--hover-color);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    border: none;
+    border-radius: var(--border-radius);
+    padding: var(--spacing-small) var(--spacing-medium);
+    color: var(--color-light);
+    background-color: var(--color-primary);
+    transition: background-color 0.3s ease;
+}
+
+button:hover, button:focus {
+    background-color: var(--color-accent);
+}
+
+header, footer {
+    background-color: var(--color-background);
+}
+
+footer {
+    height: var(--spacing-large);
+    border-top: 1px solid var(--foreground-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer ul {
+    display: flex;
+    gap: var(--spacing-medium);
+}
