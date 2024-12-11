@@ -82,3 +82,19 @@ function renderProducts(productsToRender) {
         productList.appendChild(productCard);
     });
 }
+
+// Sorteringslogikk. første billigst til dyrest. andre dyrest til billigst. tredje best rating
+function sortProducts() {
+    const sortValue = sortSelect.value;
+    let sortedProducts = [...products];
+
+    if (sortValue === 'price-asc') {
+        sortedProducts.sort((a, b) => a.price - b.price); 
+    } else if (sortValue === 'price-desc') {
+        sortedProducts.sort((a, b) => b.price - a.price); 
+    } else if (sortValue === 'rating') {
+        sortedProducts.sort((a, b) => b.rating - a.rating); 
+    }
+
+    renderProducts(sortedProducts);
+}
