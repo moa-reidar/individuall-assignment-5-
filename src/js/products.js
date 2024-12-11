@@ -142,3 +142,14 @@ function updateCartCount() {
     const cartCount = cartItems.length;
     document.getElementById('cart-count').textContent = cartCount;
 }
+
+// Initialiser produktsiden
+function initProductsPage() {
+    renderProducts(products);
+    sortSelect.addEventListener('change', sortProducts);
+    updateCartCount();
+}
+
+// Kjør initProductsPage når siden lastes
+document.addEventListener('DOMContentLoaded', initProductsPage);
+
