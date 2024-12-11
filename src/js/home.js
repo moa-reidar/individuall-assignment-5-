@@ -29,3 +29,12 @@ function setupHeroCTA() {
         });
     }
 }
+
+// Initialiser home-siden, oppdater velkomstmeldingen i hero-seksjonen og legger til smooth scrolling for hero-knappen
+function initHomePage() {
+    updateHeroMessage(); 
+    setupHeroCTA(); 
+}
+
+// Kjør initHomePage når siden lastes
+document.addEventListener('DOMContentLoaded', initHomePage);
