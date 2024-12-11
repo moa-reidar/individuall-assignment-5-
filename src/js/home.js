@@ -16,3 +16,16 @@ function updateHeroMessage() {
     heroTitle.textContent = message;
     heroSubtitle.textContent = 'Din favorittdestinasjon for den beste elektronikken.';
 }
+
+// Enkel hero-knapp som scroller til "Utvalgte Produkter"-seksjonen
+function setupHeroCTA() {
+    const heroCTAButton = document.querySelector('.hero__cta');
+    const featuredProductsSection = document.querySelector('.featured-products');
+
+    if (heroCTAButton && featuredProductsSection) {
+        heroCTAButton.addEventListener('click', (event) => {
+            event.preventDefault();
+            featuredProductsSection.scrollIntoView({ behavior: 'smooth' });
+        });
+    }
+}
