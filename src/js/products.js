@@ -118,3 +118,27 @@ function closeModal() {
     const modal = document.getElementById('product-modal');
     modal.style.display = 'none';
 }
+
+
+// Legger til produkt i handlekurv
+function addToCart(productId, productName, productPrice) {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cartItems.push({
+        id: productId,
+        name: productName,
+        price: productPrice
+    });
+
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+    updateCartCount();
+
+    alert(`${productName} er lagt til i handlekurven!`);
+}
+
+// Oppdater antall produkter i handlekurv-ikonet
+function updateCartCount() {
+    const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartCount = cartItems.length;
+    document.getElementById('cart-count').textContent = cartCount;
+}
