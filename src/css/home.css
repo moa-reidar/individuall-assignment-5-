@@ -38,3 +38,45 @@
 .hero__cta:focus {
     background-color: var(--color-accent);
 }
+
+/* About Section */
+.about {
+    padding: var(--spacing-large) var(--spacing-medium);
+    background-color: var(--color-light);
+    text-align: center;
+}
+
+.about__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-large);
+}
+
+.about__features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: var(--spacing-large);
+}
+
+.about__feature {
+    background-color: var(--color-background);
+    padding: var(--spacing-medium);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    max-width: 300px;
+    text-align: center;
+}
+
+.about__feature-title {
+    font-size: var(--font-size-large);
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-small);
+}
+
+.about__feature-text {
+    font-size: var(--font-size-base);
+    color: var(--color-text);
+}
