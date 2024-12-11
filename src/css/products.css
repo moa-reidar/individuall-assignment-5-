@@ -120,3 +120,46 @@
 .product-card__button--cart:focus {
     background-color: var(--color-accent);
 }
+
+
+/* Modal Styling */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    background-color: var(--color-light);
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius);
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-dark);
+}
+
+.modal__content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-medium);
+    border-radius: var(--border-radius);
+}
+
