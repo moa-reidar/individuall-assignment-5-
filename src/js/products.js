@@ -21,3 +21,64 @@ const products = [
     { id: 15, name: 'Trådløs Lader Pro', price: 499, rating: 3, description: 'En praktisk trådløs lader for alle dine enheter.', image: './assets/images/product15.jpg' }
 ];
 
+// Render produkter til DOM og tømmer produktlisten 
+function renderProducts(productsToRender) {
+    productList.innerHTML = ''; 
+
+    productsToRender.forEach(product => {
+       
+         // Opprett produktkortets hovedcontainer
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+        productCard.id = `product-${product.id}`;
+
+        // Opprett produktbilde
+        const productImage = document.createElement('img');
+        productImage.classList.add('product-card__image');
+        productImage.src = product.image;
+        productImage.alt = product.name;
+
+        // Opprett produktinnhold-container
+        const productContent = document.createElement('div');
+        productContent.classList.add('product-card__content');
+
+        // Opprett produktnavn
+        const productTitle = document.createElement('h2');
+        productTitle.classList.add('product-card__title');
+        productTitle.textContent = product.name;
+
+        // Opprett produktpris
+        const productPrice = document.createElement('p');
+        productPrice.classList.add('product-card__price');
+        productPrice.textContent = `Pris: ${product.price} NOK`;
+
+        // Opprett produktvurdering
+        const productRating = document.createElement('p');
+        productRating.classList.add('product-card__rating');
+        productRating.textContent = `Rating: ${'★'.repeat(product.rating)}${'☆'.repeat(5 - product.rating)}`;
+
+        // Opprett "Mer informasjon"-knapp
+        const infoButton = document.createElement('button');
+        infoButton.classList.add('product-card__button');
+        infoButton.textContent = 'Mer informasjon';
+        infoButton.addEventListener('click', () => openModal(product.id));
+
+        // Opprett "Legg til i handlekurv"-knapp
+        const cartButton = document.createElement('button');
+        cartButton.classList.add('product-card__button', 'product-card__button--cart');
+        cartButton.textContent = 'Legg til i handlekurv';
+        cartButton.addEventListener('click', () => addToCart(product.id, product.name, product.price));
+
+        // Bygger produktkortet
+        productContent.appendChild(productTitle);
+        productContent.appendChild(productPrice);
+        productContent.appendChild(productRating);
+        productContent.appendChild(infoButton);
+        productContent.appendChild(cartButton);
+        productCard.appendChild(productImage);
+        productCard.appendChild(productContent);
+
+        // Legger produktkortet til produktlisten
+        productList.appendChild(productCard);
+    });
+}
