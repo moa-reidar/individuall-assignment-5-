@@ -34,3 +34,20 @@ function renderCartItems() {
     // Oppdater totalpris
     totalPriceElement.textContent = `${totalPrice} NOK`;
 }
+
+// Valider skjemaet
+function validateForm(event) {
+    event.preventDefault(); // Forhindrer standard oppførsel
+    const name = document.getElementById('name').value.trim();
+    const address = document.getElementById('address').value.trim();
+    const email = document.getElementById('email').value.trim();
+
+    if (!name || !address || !email) {
+        alert('Vennligst fyll ut alle feltene i skjemaet.');
+        return;
+    }
+
+    // Fullfør bestilling
+    completeOrder(name, address, email);
+}
+
