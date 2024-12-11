@@ -38,7 +38,34 @@
             </div>
             <p class="cart-summary__total">Totalpris: <span id="cart-total">0</span> NOK</p>
         </section>
-
+        
+        <section class="order-form">
+            <h2 class="order-form__title">Fullfør Bestillingen</h2>
+            <form class="order-form__form" action="/submit-order" method="post">
+                <div class="order-form__group">
+                    <label class="order-form__label" for="name">Navn:</label>
+                    <input class="order-form__input" type="text" id="name" name="name" required>
+                </div>
+                <div class="order-form__group">
+                    <label class="order-form__label" for="address">Adresse:</label>
+                    <input class="order-form__input" type="text" id="address" name="address" required>
+                </div>
+                <div class="order-form__group">
+                    <label class="order-form__label" for="email">E-post:</label>
+                    <input class="order-form__input" type="email" id="email" name="email" required>
+                </div>
+                <div class="order-form__group">
+                    <label class="order-form__label" for="payment-method">Betalingsmetode:</label>
+                    <select class="order-form__select" id="payment-method" name="payment-method" required>
+                        <option value="card">Kredittkort</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="invoice">Faktura</option>
+                    </select>
+                </div>
+                <button class="order-form__button" type="submit">Fullfør Bestilling</button>
+            </form>
+        </section>
+        
         
     </main>
 
