@@ -26,3 +26,35 @@
 .header__nav-item {
     position: relative;
 }
+
+.header__nav-link {
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    color: var(--color-light);
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.header__nav-link:hover,
+.header__nav-link:focus {
+    color: var(--color-secondary);
+}
+
+.header__nav-item--cart {
+    font-size: var(--font-size-large);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#cart-count {
+    background-color: var(--color-accent);
+    color: var(--color-light);
+    font-size: var(--font-size-small);
+    font-weight: bold;
+    padding: var(--spacing-small) var(--spacing-medium);
+    border-radius: var(--border-radius);
+    margin-left: var(--spacing-small);
+    position: relative;
+    top: -2px;
+}
