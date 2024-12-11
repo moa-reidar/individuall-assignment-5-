@@ -25,3 +25,11 @@ function addToCart(productId, productName, productPrice) {
     // Viser en bekreftelse
     alert(`${productName} er lagt til i handlekurven!`);
 }
+
+// Initialiser felles funksjoner, og  Oppdater handlekurv-antall når siden lastes
+function initCommon() {
+    updateCartCount();  
+}
+
+// Kjør initCommon når skriptet lastes
+document.addEventListener('DOMContentLoaded', initCommon);
