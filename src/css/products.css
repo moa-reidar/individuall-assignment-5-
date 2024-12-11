@@ -1,0 +1,13 @@
+/* General Styling */
+.products {
+    padding: var(--spacing-large) var(--spacing-medium);
+    background-color: var(--color-background);
+}
+
+.products__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-large);
+    justify-content: center;
+    margin-top: var(--spacing-large);
+}
