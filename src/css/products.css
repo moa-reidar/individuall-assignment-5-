@@ -11,3 +11,38 @@
     justify-content: center;
     margin-top: var(--spacing-large);
 }
+
+/* Sorteringsmeny */
+.sort {
+    text-align: center;
+    padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.sort__title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-medium);
+}
+
+.sort__options {
+    display: inline-block;
+    margin-bottom: var(--spacing-large);
+}
+
+.sort__label {
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    color: var(--color-text);
+    margin-right: var(--spacing-small);
+}
+
+.sort__select {
+    font-size: var(--font-size-base);
+    padding: var(--spacing-small) var(--spacing-medium);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    background-color: var(--color-light);
+    color: var(--color-primary);
+    cursor: pointer;
+}
