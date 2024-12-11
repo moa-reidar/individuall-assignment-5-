@@ -1,0 +1,28 @@
+/* Navbar CSS */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-light);
+    padding: var(--spacing-small) var(--spacing-medium);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header__nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header__nav-list {
+    display: flex;
+    list-style: none;
+    gap: var(--spacing-large);
+}
+
+.header__nav-item {
+    position: relative;
+}
