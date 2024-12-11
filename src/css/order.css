@@ -64,3 +64,30 @@
     text-align: center;
     margin-bottom: var(--spacing-large);
 }
+
+.order-form__form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-medium);
+}
+
+.order-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-small);
+}
+
+.order-form__label {
+    font-size: var(--font-size-base);
+    font-weight: bold;
+    color: var(--color-text);
+}
+
+.order-form__input, .order-form__select {
+    padding: var(--spacing-small) var(--spacing-medium);
+    font-size: var(--font-size-base);
+    border: 1px solid var(--color-primary);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    background-color: var(--color-light);
+}
