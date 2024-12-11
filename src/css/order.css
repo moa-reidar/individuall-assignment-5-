@@ -91,3 +91,9 @@
     color: var(--color-text);
     background-color: var(--color-light);
 }
+
+.order-form__button {
+    margin-top: var(--spacing-large);
+    align-self: center;
+    width: 100%;
+}
