@@ -51,3 +51,13 @@ function validateForm(event) {
     completeOrder(name, address, email);
 }
 
+// Fullfør bestilling og Tømmer handlekurv
+function completeOrder(name, address, email) {
+    
+    localStorage.removeItem('cart');
+
+    // Bekreftelse og naviger til startsiden
+    alert(`Takk for din bestilling, ${name}!\nProduktene vil bli sendt til:\n${address}`);
+    window.location.href = './index.html'; 
+}
+
