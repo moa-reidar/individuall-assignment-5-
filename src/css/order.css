@@ -46,3 +46,21 @@
     text-align: center;
     margin-top: var(--spacing-medium);
 }
+
+/* Order Form Section */
+.order-form {
+    padding: var(--spacing-large) var(--spacing-medium);
+    margin: var(--spacing-large) auto;
+    max-width: 600px;
+    background-color: var(--color-light);
+    box-shadow: var(--box-shadow);
+    border-radius: var(--border-radius);
+}
+
+.order-form__title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: var(--spacing-large);
+}
