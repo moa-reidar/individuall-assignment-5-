@@ -1,3 +1,8 @@
+
+link github: https://github.com/moa-reidar/individuall-assignment-5-.git
+
+link netlify: https://675a2e954b7dd2a4bd735149--glowing-arithmetic-74301b.netlify.app/
+
 1. Planning and Structuring
 I started with a clear idea to create a website for an electronics store.
 The website includes three main pages:
@@ -33,6 +38,7 @@ navbar.css: Styles the navigation menu.
 style.css: General styles applied to the entire project.
 products.css: Specific styles for the product page, including the modal.
 order.css: Styles for the order page.
+
 Design Choices
 I implemented a responsive design focusing on flexibility and ease of use.
 Ensured that product cards are symmetrical using fixed height and flexbox.
